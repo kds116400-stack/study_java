@@ -1,11 +1,13 @@
 package ex_work;
 
+import java.util.Scanner;
+
 public class Ex_work {
     public static void main(String[] args) {
         
       //윤년구하기
       //키보드에서 년도를 입력받는다
-      //입력받은 년도가 윤년인지 평년인지를 판다
+      //입력받은 년도가 윤년인지 평년인지를 판단
       
       //-------윤년--------
       //4로 나눠떨어지지만 100으로는 나눠떨어지지 않는 연도
@@ -19,6 +21,31 @@ public class Ex_work {
 
       //연도 : 2021
       //2021년은 평년입니다
+
+      Scanner sc = new Scanner( System.in );
+      System.out.println("연도:");
+      int year = sc.nextInt();
+
+      
+    
+  
+
+
+      
+      
+     
+
+
+
+
+
+      
+
+
+
+
+
+
 
     }//main
 }
