@@ -2,7 +2,7 @@ package ex_work;
 
 import java.util.Scanner;
 
-public class Ex_work {
+public class Ex1_work {
     public static void main(String[] args) {
         
       //윤년구하기
@@ -23,27 +23,17 @@ public class Ex_work {
       //2021년은 평년입니다
 
       Scanner sc = new Scanner( System.in );
-      System.out.println("연도:");
+      System.out.print("연도: ");
       int year = sc.nextInt();
-
-      
-    
+         
+      boolean res = (year % 4 == 0 && year % 100 != 0 || year % 400 ==0);    
   
-
-
-      
-      
+      if( res ){//res == true
+          System.out.println(year + "년은 윤년");
+      }else{
+        System.out.println(year + "년은 평년");
+      }
      
-
-
-
-
-
-      
-
-
-
-
 
 
 

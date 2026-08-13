@@ -11,7 +11,7 @@ public class Ex2_for {
         for(int i = 1; i<=10; i++){
 
             if(i % 2 == 1){
-              sum += i;
+              sum += i;//sum = sum + i
             }
 
         }//for
