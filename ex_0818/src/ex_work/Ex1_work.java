@@ -4,43 +4,38 @@ import java.util.Scanner;
 
 public class Ex1_work {
     public static void main(String[] args) {
-        
-        //키보드에서 입력받은 값이 회문인지 판다
-        //------------------
-        //입력 : abcba
-        //abcba은(는) 회문입니다
 
-        //입력 : abc
-        //abc은(는) 회문이 아닙니다
+        // 키보드에서 입력받은 값이 회문인지 판다
+        // ------------------
+        // 입력 : abcba
+        // abcba은(는) 회문입니다
+
+        // 입력 : abc
+        // abc은(는) 회문이 아닙니다
 
         Scanner sc = new Scanner(System.in);
         System.out.print("입력 : ");
-        String n = sc.next();
+        // String n = sc.next();
 
-        for(int i = 0; i < n.length(); i++){
+        // 원본
+        String str = sc.next();
 
-            String str = "";
-            
-           while(true){
+        StringBuffer sb = new StringBuffer(str);
 
-                char ch = str.charAt(i);
+        // 원본을 뒤집어서 저장할 객체
+        String rev = sb.reverse().toString();
 
-                if( ch == '0' || ch == '9' ){
-                    break;
-                }
-                
+        // for (int i = str.length() - 1; i >= 0; i--) {
 
-            }//while
+        // rev += str.charAt(i);
 
-            i++;
+        // } // for
 
-            if(  i == str.length() ){
-                System.out.println("은(는) 회문입니다");
-            }else{
-                System.out.println("은(는) 회문이 아닙니다");
-            }
+        if (str.equals(rev)) { // str == rev는 String에서 거진 이용불가 (비교가 안돼서)
+            System.out.println(str + "은 회문이다");
+        } else {
+            System.out.println(str + "은 회문이 아니다");
+        }
 
-        }//for
-
-    }//main
+    }// main
 }

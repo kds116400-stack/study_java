@@ -10,5 +10,6 @@ public class MethodMain {
         su = m1.test2( su );
 
         System.out.println("su : " + su);
+        
     }//main
 }

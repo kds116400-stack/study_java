@@ -15,7 +15,7 @@ public class Computer {
     public void info(){
         System.out.println("브랜드 :" + brand);
         System.out.println("ssd : " + ssd);
-        System.out.println("ram : "+ ram);
+        System.out.println("ram : " + ram);
         System.out.println("cpu : " + cpu);
         System.out.println("색상 : "+ color);
         System.out.println("----------------");
