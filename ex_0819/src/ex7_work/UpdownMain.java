@@ -1,6 +1,5 @@
 package ex7_work;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class UpdownMain {
@@ -15,19 +14,25 @@ public class UpdownMain {
         //UP
         //정수 : 25
         //3회 만에 정답
-
+        
         Scanner sc = new Scanner(System.in);
-        
-        
-        
-        while(){
-            
-            System.out.println("입력 : ");
-            int n = sc.nextInt();
+                
+        int select = 0;
+        boolean check = false;
 
-            int n = new Random().nextInt(50 - 1 + 1) + 1;
+        Updownsub us = new Updownsub();
 
-        }//While
+        do{
+
+            System.out.print("정수 : ");
+            select = sc.nextInt();
+            check = us.check(select);
+
+
+        }while( check ); //check == true
+
+     
+       
 
     }//main
 }
