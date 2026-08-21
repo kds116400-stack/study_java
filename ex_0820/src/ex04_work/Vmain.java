@@ -11,7 +11,7 @@ public class Vmain {
         int money = sc.nextInt();
 
         Vending ven = new Vending();
-        ven.init();
+        //ven.init();
 
         ven.showDringk(money);
 
