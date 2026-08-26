@@ -1,5 +1,8 @@
 package ex_work;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class WorkMain {
     public static void main(String[] args) {
         
@@ -19,6 +22,50 @@ public class WorkMain {
         //정답입니다
         //결과 : 24초
         
+        Scanner sc = new Scanner(System.in);
+        Random rnd = new Random();
+        int playCount = 0;
+        final int FINISH = 3;
+
+        TimerSub ts = new TimerSub();
+        ts.start();//타이머 시작
+
+        while (true) {
+            
+            if( playCount == FINISH ){
+                ts. setCheck(false);
+                break;
+           
+            }else{
+
+                
+                try{
+
+                    int su1 = rnd.nextInt(100) + 1;
+                    int su2 = rnd.nextInt(100) + 1;
+                    System.out.printf(
+                        "%d + %d = ", su1, su2);
+
+                    int res = sc.nextInt();
+
+                    if(res == su1 + su2){
+                        System.out.println("정답입니다");
+                        playCount++;
+                    }else{
+                        System.out.println("오답입니다");
+                    }
+
+                    
+                }catch(Exception e){
+
+                    System.out.println("정답은 정수로 입력해야 합니다");
+                    
+                }
+            }
+
+        }//while
+
+
 
     }//main
 }
