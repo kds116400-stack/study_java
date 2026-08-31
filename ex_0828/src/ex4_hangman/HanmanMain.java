@@ -1,8 +1,11 @@
-package ex5_work;
+package ex4_hangman;
 
-public class WorkMain {
+import java.util.Random;
+
+public class HanmanMain {
+
     public static void main(String[] args) {
-        
+
         // *** HangMan ***
         // Word : ☆☆☆☆☆ >> a
         // Word : a☆☆☆☆ >> a
@@ -16,5 +19,12 @@ public class WorkMain {
         // Word : app☆e >> l
         // apple 정답
         // 7회 만에 정답
-    }// main
+
+        String[] word = { "apple", "game" };
+        int rnd = new Random().nextInt(word.length);
+
+        PlayGame pg = new PlayGame();
+        pg.play(word[rnd]);
+
+    }
 }
